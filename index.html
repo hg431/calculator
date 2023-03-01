@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .html {
+            background: rgb(0,183,221);
+            background: linear-gradient(90deg, rgba(0,183,221,1) 0%, rgba(0,221,146,1) 100%);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        #container {
+            background-color: rgba(255, 255, 255, 0.2);
+            border:1px rgba(255, 255, 255, 0.4);
+            border-radius: 30px;
+            padding: 20px;
+            box-shadow: 0px 0px 60px 0px black;
+            width: 500px;
+            margin: auto;
+            position: absolute;
+            top: 50%;
+            left:50%;
+        }
+        #container h2 {
+            color: white;
+            font-size:30px;
+        }
+        #container button {
+            width: 40px;
+            height: 40px;
+            background-color: transparent;
+            border-width: 1px;
+            border-color: black;
+            font-family: inherit;
+            font-size: inherit;
+            font-style: inherit;
+            font-weight: inherit;
+            line-height: inherit;
+            padding: 0;
+            border-radius: 2px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>Calculator</h2>
+        <div id="screen"></div>
+        <button id="clear">Clear</button>
+        <button class="operator">&#247;</button>
+        <button class="number">7</button>
+        <button class="number">8</button>
+        <button class="number">9</button>
+        <button class="operator">&#215;</button>
+        <button class="number">4</button>
+        <button class="number">5</button>
+        <button class="number">6</button>
+        <button class="operator">&#43;</button>
+        <button class="number">1</button>
+        <button class="number">2</button>
+        <button class="number">3</button>
+        <button class="operator">&#8722;</button>
+        <button class="number">0</button>
+        <button class="number"></button>
+        <button class="number">.</button>
+        <button class="operator">&#61;</button>
+    </div>
+</body>
+</html>
