@@ -13,18 +13,21 @@
             font-size: 20px;
         }
         #container {
-            background-color: rgba(255, 255, 255, 0.2);
-            border:1px rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.5);
+            border:1px white;
             border-radius: 30px;
             padding: 20px;
             box-shadow: 0px 0px 60px 0px black;
             width: 500px;
+            height: 500px;
             position:absolute;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
             margin: auto;
+        }
+        #button-wrapper {
             display:grid;
             grid-template-columns: auto auto auto;
         }
@@ -32,10 +35,12 @@
             color: white;
             font-size:30px;
         }
-        #container button {
-            width: 40px;
-            height: 40px;
+        button {
+            width: 80px;
+            height: 80px;
+            margin:20px;
             background-color: transparent;
+            color:black;
             border-width: 1px;
             border-color: black;
             font-family: inherit;
@@ -44,8 +49,16 @@
             font-weight: inherit;
             line-height: inherit;
             padding: 0;
-            border-radius: 2px;
-
+            border-radius: 5px;
+        }
+        button #clear {
+            width: 180px;
+        }
+        button .operator {
+            background-color: orange;
+        }
+        button .number {
+            background-color: grey;
         }
     </style>
 </head>
@@ -53,6 +66,7 @@
     <div id="container">
         <h2>Calculator</h2>
         <div id="screen"></div>
+        <div id="button-wrapper">
         <button id="clear">Clear</button>
         <button class="operator">&#247;</button>
         <button class="number">7</button>
@@ -71,6 +85,7 @@
         <button class="number"></button>
         <button class="number">.</button>
         <button class="operator">&#61;</button>
+    </div>
     </div>
 </body>
 </html>
