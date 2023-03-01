@@ -29,20 +29,23 @@
         }
         #button-wrapper {
             display:grid;
-            grid-template-columns: auto auto auto;
+            grid-template-columns: auto auto auto auto;
         }
         #container h2 {
             color: white;
             font-size:30px;
         }
+        #screen {
+            height: 40px;
+        }
         button {
             width: 80px;
             height: 80px;
-            margin:20px;
-            background-color: transparent;
-            color:black;
+            margin:10px;
+            color:white;
             border-width: 1px;
             border-color: black;
+            background-color: transparent;
             font-family: inherit;
             font-size: inherit;
             font-style: inherit;
@@ -51,13 +54,14 @@
             padding: 0;
             border-radius: 5px;
         }
-        button #clear {
+        #clear {
             width: 180px;
+            grid-column: span 3;
         }
-        button .operator {
+        .operator {
             background-color: orange;
         }
-        button .number {
+        .number {
             background-color: grey;
         }
     </style>
