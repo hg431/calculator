@@ -14,12 +14,12 @@
             font-weight:bold;
         }
         #container {
-            background-color: rgba(255, 255, 255, 0.7);
-            border:1px solid white;
+            background-color: rgba(255, 255, 255, 0.9);
+            border:1px solid black;
             border-radius: 30px;
             padding: 20px;
-            box-shadow: 0px 0px 60px 0px black;
-            width: 400px;
+            box-shadow: 0px 0px 30px 30px rgba(0,0,0,0.2);
+            width: 360px;
             height: 550px;
             position:absolute;
             left: 0;
@@ -36,12 +36,16 @@
             height: 80px;
             background-color: azure;
             margin: 10px;
+            padding: 10px;
             border-radius: 5px;
             border: 1px solid black;
+            letter-spacing: 1em;
+            text-align: right;
+            color: #000;
         }
         button {
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             margin:10px;
             color:white;
             border-width: 1px;
@@ -56,9 +60,9 @@
             border-radius: 5px;
         }
         #clear {
-            width: 270px;
+            width: 220px;
             grid-column: span 3;
-            background-color: lightgrey;
+            background-color: grey;
         }
         .operator {
             background-color: orange;
@@ -70,7 +74,7 @@
 </head>
 <body>
     <div id="container">
-        <div id="screen"></div>
+        <div id="screen">12345</div>
         <div id="button-wrapper">
         <button id="clear">Clear</button>
         <button class="operator">&#247;</button>
