@@ -14,28 +14,26 @@
             font-weight:bold;
         }
         #container {
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgba(255, 255, 255, 0.85);
             border:1px solid black;
             border-radius: 30px;
-            padding: 20px;
-            box-shadow: 0px 0px 30px 30px rgba(0,0,0,0.2);
-            width: 360px;
-            height: 550px;
+            box-shadow: 0px 0px 20px 20px rgba(0,0,0,0.15);
+            width: 330px;
+            height: 530px;
             position:absolute;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
             margin: auto;
-        }
-        #button-wrapper {
             display:grid;
-            grid-template-columns: auto auto auto auto;
+            grid-template-columns: repeat (4, 1fr);
+            grid-template-rows: 80px repeat (6, 1fr);
+            grid-gap: 10px;
         }
         #screen {
-            height: 80px;
-            background-color: azure;
-            margin: 10px;
+            background-color:white;
+            grid-column: span 4;
             padding: 10px;
             border-radius: 5px;
             border: 1px solid black;
@@ -44,9 +42,6 @@
             color: #000;
         }
         button {
-            width: 60px;
-            height: 60px;
-            margin:10px;
             color:white;
             border-width: 1px;
             border-color: black;
