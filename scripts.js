@@ -52,7 +52,8 @@ let displayValue = "0";
 
 // Add event listeners to each button
 
-const zeroClick = document.getElementById("0").addEventListener("click", function() {
+const zeroClick = document.getElementById("0");
+zeroClick.addEventListener("click", function() {
   buttonClick("0")
 });
 
@@ -60,18 +61,22 @@ const zeroClick = document.getElementById("0").addEventListener("click", functio
 
 // Operators
 
-const divideClick = document.getElementById("divide").addEventListener("click", function() {
+const divideClick = document.getElementById("divide")
+divideClick.addEventListener("click", function() {
   buttonClick("divide")
 });
 
 // Repeat for all operators
 
-const clearClick = document.getElementById("clear").addEventListener("click", function() {
+const screen = document.getElementById("screen");
+
+const clearClick = document.getElementById("clear");
+clearClick.addEventListener("click", function() {
   displayValue = "0";
-  document.getElementByID("screen").textContent = "0";
-})
+  screen.textContent = "0";
+});
 
 
 function buttonClick(e) {
-  document.getElementByID("screen").textContent = "buttonClick " + e;
+  screen.textContent = "buttonClick " + e;
 };
