@@ -33,7 +33,7 @@ const operate = function(a, b, operator) {
   } else if (operator == "subtract") {
     return subtract(a,b);
   } else if (operator == "multiply") {
-    return multiply(a,b) 
+    return multiply([a,b]) 
   } else if (operator == "divide") {
     return divide(a,b);
   } else {
@@ -41,11 +41,37 @@ const operate = function(a, b, operator) {
   };
 };
 
-
 // Debug
 
-console.log("Add 5 and 4 " + add(5,4));
-console.log("Subtract 5 from 4 " + subtract(4,5));
-console.log("Multiply 5 and 4 " + multiply([5,4]));
-console.log("Divide 10 by 2 " + divide(10,2));
-console.log("Operate function 10 add 2" + operate(10,2,"add"));
+console.log("Operate Add 5 and 4 " + operate(5,4,"add"));
+console.log("Operate Subtract 5 from 4 " + operate(4,5,"subtract"));
+console.log("Operate Multiply 5 and 4 " + operate(5,4,"multiply"));
+console.log("Operate Divide 10 by 2 " + operate(10,2,"divide"));
+
+let displayValue = "0";
+
+// Add event listeners to each button
+
+const zeroClick = document.getElementById("0").addEventListener("click", function() {
+  buttonClick("0")
+});
+
+// Repeat for all numbers
+
+// Operators
+
+const divideClick = document.getElementById("divide").addEventListener("click", function() {
+  buttonClick("divide")
+});
+
+// Repeat for all operators
+
+const clearClick = document.getElementById("clear").addEventListener("click", function() {
+  displayValue = "0";
+  document.getElementByID("screen").textContent = "0";
+})
+
+
+function buttonClick(e) {
+  document.getElementByID("screen").textContent = "buttonClick " + e;
+};
