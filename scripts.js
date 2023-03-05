@@ -41,12 +41,6 @@ const operate = function(a, b, operator) {
   };
 };
 
-/*
-const displayValueSplit = displayValue.split(/([+×÷−])/);
-operate(displayValueSplit[0],displayValueSplit[2],displayValueSplit[1]);
-*/
-
-
 let displayValue = "0";
 
 // Add event listeners to numbers 0-9
@@ -114,6 +108,11 @@ const screen = document.getElementById("screen");
 document.getElementById("clear").addEventListener("click", function() {
   displayValue = "0";
   screen.textContent = "0";
+});
+
+document.getElementById("equals").addEventListener("click", function() {
+  const displayValueSplit = displayValue.split(/([+×÷−])/);
+  operate(displayValueSplit[0],displayValueSplit[2],displayValueSplit[1]);
 });
 
 function buttonClick(e) {
