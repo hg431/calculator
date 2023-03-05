@@ -107,7 +107,6 @@ document.getElementById("divide").addEventListener("click", function() {
   buttonClick("divide")
 });
 
-
 const screen = document.getElementById("screen");
 
 document.getElementById("clear").addEventListener("click", function() {
@@ -116,10 +115,16 @@ document.getElementById("clear").addEventListener("click", function() {
 });
 
 function buttonClick(e) {
-  if (e == 0 || e == 1 || e == 2 || e == 3 || e == 4 || e == 5 || e == 6 || e == 7 || e == 8 || e == 9) {
-    screen.textContent += e;
+  if (e == "0" || e == "1" || e == "2" || 
+      e == "3" || e == "4" || e == "5" || 
+      e == "6" || e == "7" || e == "8" || e == "9") {
+    if (screen.textContent == "0") {
+      screen.textContent = e;
+    } else {
+      screen.textContent += e;
+    }
   } else if (e == "add") {
-    screen.textContent += "&#43;";
+    screen.textContent += "\u&#43 \u43";
   }
 };
 
