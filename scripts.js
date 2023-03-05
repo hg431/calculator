@@ -120,8 +120,13 @@ function buttonClick(e) {
       screen.textContent += e;
     };
   } else if (e == "add") {
-    screen.textContent += "add";
-    // screen.textContent += "\u43";
+    screen.textContent += '&plus;';
+  } else if (e == "multiply") {
+    screen.textContent += '&times;';
+  } else if (e == "divide") {
+    screen.textContent += "divide";
+  } else if (e == "subtract") {
+    screen.textContent += "subtract";
   };
 };
 
