@@ -117,9 +117,8 @@ document.getElementById("equals").addEventListener("click", function() {
 
   console.log("displayValue " + displayValue);
 
-//  const displayValueSplit = displayValue.split(/([+×÷−])/);
-//  console.log("displayValueSplit " + displayValueSplit);
-//  const answer = operate(displayValueSplit[0],displayValueSplit[2],displayValueSplit[1]);
+//  Bug to fix - unable to start with a minus number
+// Add decimal support
    
   let finalAnswer = displayValue.split(/([+×÷−])/);
   console.log("Initial finalAnswer: " + finalAnswer);
