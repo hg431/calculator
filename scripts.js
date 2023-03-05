@@ -111,13 +111,28 @@ document.getElementById("clear").addEventListener("click", function() {
 });
 
 document.getElementById("equals").addEventListener("click", function() {
+
   console.log("displayValue " + displayValue);
-  const displayValueSplit = displayValue.split(/([+×÷−])/);
-  console.log("displayValueSplit " + displayValueSplit);
-  const answer = operate(displayValueSplit[0],displayValueSplit[2],displayValueSplit[1]);
-  console.log("answer " + answer);
-  screen.textContent = answer.toString();
-  displayValue = answer;
+
+//  const displayValueSplit = displayValue.split(/([+×÷−])/);
+//  console.log("displayValueSplit " + displayValueSplit);
+//  const answer = operate(displayValueSplit[0],displayValueSplit[2],displayValueSplit[1]);
+   
+  let finalAnswer = displayValue.split(/([+×÷−])/);
+  console.log("Initial finalAnswer: " + finalAnswer);
+
+  while (finalAnswer.length > 1) {
+
+    let intermediateAnswer = operate(finalAnswer[0],finalAnswer[2],finalAnswer[1]);
+    console.log("Intermediate answer: " + intermediateAnswer);
+
+    finalAnswer.splice(0, 3, intermediateAnswer);
+    console.log("Final answer: " + finalAnswer);
+  };
+
+  screen.textContent = finalAnswer.toString();
+  displayValue = finalAnswer;
+  
 });
 
 function buttonClick(e) {
