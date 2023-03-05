@@ -43,23 +43,15 @@ const operate = function(a, b, operator) {
 
 let displayValue = "0";
 
-// Add event listeners to each button
+// Add event listeners to numbers 0-9
 
 var i = 0;
-
 while (i < 10) {
   document.getElementById(i).addEventListener("click", function() {
-  buttonClick(i)
+  buttonClick(this)
   });
   i++;
 }
-/*
-const zeroClick = document.getElementById("0");
-zeroClick.addEventListener("click", function() {
-  buttonClick("0")
-});
-*/
-// Repeat for all numbers
 
 // Operators
 
@@ -83,4 +75,4 @@ function buttonClick(e) {
   screen.textContent = "buttonClick " + e;
 };
 
-document.getElementById("screen").textContent = "Testing";
+document.getElementById("screen").textContent = "0";
