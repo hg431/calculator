@@ -122,9 +122,9 @@ function buttonClick(e) {
       screen.textContent = e;
     } else {
       screen.textContent += e;
-    }
+    };
   } else if (e == "add") {
-    screen.textContent += "\u&#43 \u43";
+    screen.textContent += "\u43";
   }
 };
 
