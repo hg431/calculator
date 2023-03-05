@@ -21,6 +21,9 @@ const multiply = function (array) {
 // Division
 
 const divide = function (a, b) {
+  if (b == 0) {
+    return screen.textContent = "Error";
+  };
   return (a / b).toFixed(3);
 };
 
@@ -132,7 +135,7 @@ document.getElementById("equals").addEventListener("click", function() {
 
   screen.textContent = finalAnswer.toString();
   displayValue = finalAnswer;
-  
+
 });
 
 function buttonClick(e) {
