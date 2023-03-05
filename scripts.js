@@ -116,17 +116,23 @@ function buttonClick(e) {
       e == 6 || e == 7 || e == 8 || e == 9) {
     if (screen.textContent == "0") {
       screen.textContent = e;
+      displayValue = e;
     } else {
       screen.textContent += e;
+      displayValue += e;
     };
   } else if (e == "add") {
-    screen.textContent += '&plus;';
+    screen.textContent += "+";
+    displayValue += "+";
   } else if (e == "multiply") {
-    screen.textContent += '&times;';
+    screen.textContent += "×";
+    displayValue += "×";
   } else if (e == "divide") {
-    screen.textContent += "divide";
+    screen.textContent += "÷";
+    displayValue += "÷";
   } else if (e == "subtract") {
-    screen.textContent += "subtract";
+    screen.textContent += "−";
+    displayValue += "−";
   };
 };
 
