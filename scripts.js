@@ -129,4 +129,4 @@ function buttonClick(e) {
   }
 };
 
-screen.textContent = "0";
+document.getElementById("screen").textContent = "0";
