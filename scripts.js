@@ -61,7 +61,7 @@ zeroClick.addEventListener("click", function() {
 
 // Operators
 
-const divideClick = document.getElementById("divide")
+const divideClick = document.getElementById("divide");
 divideClick.addEventListener("click", function() {
   buttonClick("divide")
 });
@@ -80,3 +80,5 @@ clearClick.addEventListener("click", function() {
 function buttonClick(e) {
   screen.textContent = "buttonClick " + e;
 };
+
+document.getElementById("screen").textContent = "Testing";
