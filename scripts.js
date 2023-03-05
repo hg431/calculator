@@ -41,13 +41,6 @@ const operate = function(a, b, operator) {
   };
 };
 
-// Debug
-
-console.log("Operate Add 5 and 4 " + operate(5,4,"add"));
-console.log("Operate Subtract 5 from 4 " + operate(4,5,"subtract"));
-console.log("Operate Multiply 5 and 4 " + operate(5,4,"multiply"));
-console.log("Operate Divide 10 by 2 " + operate(10,2,"divide"));
-
 let displayValue = "0";
 
 // Add event listeners to each button
