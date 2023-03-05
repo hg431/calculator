@@ -120,9 +120,9 @@ function buttonClick(e) {
       screen.textContent += e;
     };
   } else if (e == "add") {
-    screen.textContent += "\u43";
+    screen.textContent += "add";
     // screen.textContent += "\u43";
-  }
+  };
 };
 
 document.getElementById("screen").textContent = "0";
