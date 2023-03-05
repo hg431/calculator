@@ -45,11 +45,20 @@ let displayValue = "0";
 
 // Add event listeners to each button
 
+var i = 0;
+
+while (i < 10) {
+  document.getElementById(i).addEventListener("click", function() {
+  buttonClick(i)
+  });
+  i++;
+}
+/*
 const zeroClick = document.getElementById("0");
 zeroClick.addEventListener("click", function() {
   buttonClick("0")
 });
-
+*/
 // Repeat for all numbers
 
 // Operators
