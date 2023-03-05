@@ -28,18 +28,24 @@ const divide = function (a, b) {
 let operator = "";
 
 const operate = function(a, b, operator) {
-  if (operator == "add") {
+  if (operator == "+") {
     return add(a,b);
-  } else if (operator == "subtract") {
+  } else if (operator == "−") {
     return subtract(a,b);
-  } else if (operator == "multiply") {
+  } else if (operator == "×") {
     return multiply([a,b]) 
-  } else if (operator == "divide") {
+  } else if (operator == "÷") {
     return divide(a,b);
   } else {
     return "Function not specified";
   };
 };
+
+/*
+const displayValueSplit = displayValue.split(/([+×÷−])/);
+operate(displayValueSplit[0],displayValueSplit[2],displayValueSplit[1]);
+*/
+
 
 let displayValue = "0";
 
