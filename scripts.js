@@ -21,7 +21,7 @@ const multiply = function (array) {
 // Division
 
 const divide = function (a, b) {
-  return a / b;
+  return (a / b).toFixed(3);
 };
 
 // Operate
