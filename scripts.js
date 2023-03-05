@@ -65,10 +65,6 @@ document.getElementById("4").addEventListener("click", function() {
 buttonClick("4")
 });
 
-document.getElementById("4").addEventListener("click", function() {
-buttonClick("4")
-});
-
 document.getElementById("5").addEventListener("click", function() {
 buttonClick("5")
 });
@@ -124,7 +120,7 @@ function buttonClick(e) {
       screen.textContent += e;
     };
   } else if (e == "add") {
-    screen.textContent += "add";
+    screen.textContent += "\u43";
     // screen.textContent += "\u43";
   }
 };
