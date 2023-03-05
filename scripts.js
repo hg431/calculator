@@ -111,9 +111,12 @@ document.getElementById("clear").addEventListener("click", function() {
 });
 
 document.getElementById("equals").addEventListener("click", function() {
+  console.log("displayValue " + displayValue);
   const displayValueSplit = displayValue.split(/([+×÷−])/);
+  console.log("displayValueSplit " + displayValueSplit);
   const answer = operate(displayValueSplit[0],displayValueSplit[2],displayValueSplit[1]);
-  screen.textValue = answer.toString();
+  console.log("answer " + answer);
+  screen.textContent = answer.toString();
   displayValue = answer;
 });
 
