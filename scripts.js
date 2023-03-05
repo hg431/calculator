@@ -112,7 +112,9 @@ document.getElementById("clear").addEventListener("click", function() {
 
 document.getElementById("equals").addEventListener("click", function() {
   const displayValueSplit = displayValue.split(/([+×÷−])/);
-  operate(displayValueSplit[0],displayValueSplit[2],displayValueSplit[1]);
+  const answer = operate(displayValueSplit[0],displayValueSplit[2],displayValueSplit[1]);
+  screen.textValue = answer.toString();
+  displayValue = answer;
 });
 
 function buttonClick(e) {
