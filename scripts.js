@@ -283,6 +283,7 @@ function keyboardPress(j) {
     screen.textContent += "−";
     displayValue += "−";
   }  else if (j.key == "Enter") {
+    event.preventDefault();
     equals();
   };
 };
