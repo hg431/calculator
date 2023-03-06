@@ -27,6 +27,8 @@ const divide = function (a, b) {
   return (a / b).toFixed(3);
 };
 
+
+
 // Operate
 let operator = "";
 
@@ -119,10 +121,11 @@ document.getElementById("clear").addEventListener("click", function() {
   screen.textContent = "0";
 });
 
-document.getElementById("equals").addEventListener("click", function() {
+// Equals function
 
+function equals() {
   console.log("displayValue " + displayValue);
-   
+    
   let finalAnswer = displayValue.split(/([+×÷−])/);
   console.log("Initial finalAnswer: " + finalAnswer);
 
@@ -146,8 +149,9 @@ document.getElementById("equals").addEventListener("click", function() {
 
   screen.textContent = finalAnswer.toString();
   displayValue = finalAnswer;
+};
 
-});
+document.getElementById("equals").addEventListener("click", equals);
 
 // Function to update the screen and the variable every time a button is clicked
 
@@ -180,6 +184,110 @@ function buttonClick(e) {
   };
 };
 
+// Keyboard support
+
+function keyboardPress(j) {
+  if (j.key == "Decimal" || j.key == ".") {
+    screen.textContent += ".";
+    displayValue += ".";
+  } else if (j.key == "0") {
+    if (screen.textContent == "0") {
+      screen.textContent = 0;
+      displayValue = 0;
+    } else {
+      screen.textContent += 0;
+      displayValue += 0;
+    };
+  } else if (j.key == "1") {
+    if (screen.textContent == "0") {
+    screen.textContent = 1;
+    displayValue = 1;
+  } else {
+    screen.textContent += 1;
+    displayValue += 1;
+  };
+  } else if (j.key == "2") {
+    if (screen.textContent == "0") {
+    screen.textContent = 2;
+    displayValue = 2;
+  } else {
+    screen.textContent += 2;
+    displayValue += 2;
+  };
+  } else if (j.key == "3") {
+    if (screen.textContent == "0") {
+    screen.textContent = 3;
+    displayValue = 3;
+  } else {
+    screen.textContent += 3;
+    displayValue += 3;
+  };
+  } else if (j.key == "4") {
+    if (screen.textContent == "0") {
+    screen.textContent = 4;
+    displayValue = 4;
+  } else {
+    screen.textContent += 4;
+    displayValue += 4;
+  };
+  } else if (j.key == "5") {
+    if (screen.textContent == "0") {
+    screen.textContent = 5;
+    displayValue = 5;
+  } else {
+    screen.textContent += 5;
+    displayValue += 5;
+  };
+  } else if (j.key == "6") {
+    if (screen.textContent == "0") {
+    screen.textContent = 6;
+    displayValue = 6;
+  } else {
+    screen.textContent += 6;
+    displayValue += 6;
+  };
+  } else if (j.key == "7") {
+    if (screen.textContent == "0") {
+    screen.textContent = 7;
+    displayValue = 7;
+  } else {
+    screen.textContent += 7;
+    displayValue += 7;
+  };
+  } else if (j.key == "8") {
+    if (screen.textContent == "0") {
+    screen.textContent = 8;
+    displayValue = 8;
+  } else {
+    screen.textContent += 8;
+    displayValue += 8;
+  };
+  } else if (j.key == "9") {
+    if (screen.textContent == "0") {
+    screen.textContent = 9;
+    displayValue = 9;
+  } else {
+    screen.textContent += 9;
+    displayValue += 9;
+  };
+  } else if (j.key == "Add" || j.key == "+") {
+    screen.textContent += "+";
+    displayValue += "+";
+  } else if (j.key == "Multiply" || j.key == "×" || j.key == "*" || j.key == "x") {
+    screen.textContent += "×";
+    displayValue += "×";
+  } else if (j.key == "Divide" || j.key == "÷" || j.key == "/") {
+    screen.textContent += "÷";
+    displayValue += "÷";
+  } else if (j.key == "Subtract" || j.key == "−" || j.key == "-") {
+    screen.textContent += "−";
+    displayValue += "−";
+  }  else if (j.key == "Enter") {
+    equals();
+  };
+};
+
+window.addEventListener('keydown', keyboardPress);
 // Start the screen off with 0
 
 document.getElementById("screen").textContent = "0";
