@@ -46,7 +46,7 @@ const operate = function(a, b, operator) {
 
 let displayValue = "0";
 
-// Add event listeners to numbers 0-9
+// Add event listeners to numbers 0-9 and decimal
 
 document.getElementById("0").addEventListener("click", function() {
   buttonClick("0")
@@ -88,6 +88,10 @@ document.getElementById("9").addEventListener("click", function() {
   buttonClick("9")
 });
 
+document.getElementById("decimal").addEventListener("click", function() {
+  buttonClick("decimal")
+});
+
 // Add event listeners for add, multiply, subtract, divide
 
 document.getElementById("add").addEventListener("click", function() {
@@ -106,6 +110,8 @@ document.getElementById("divide").addEventListener("click", function() {
   buttonClick("divide")
 });
 
+// Add event listeners for clear and equals
+
 const screen = document.getElementById("screen");
 
 document.getElementById("clear").addEventListener("click", function() {
@@ -117,14 +123,15 @@ document.getElementById("equals").addEventListener("click", function() {
 
   console.log("displayValue " + displayValue);
 
-//  Bug to fix - unable to start with a minus number
 // Add decimal support
+
+// Function to work out the answer once you press equals
    
   let finalAnswer = displayValue.split(/([+×÷−])/);
   console.log("Initial finalAnswer: " + finalAnswer);
 
   while (finalAnswer.length > 1) {
-
+// Do a check here so that each element has no more than one decimal point
     let intermediateAnswer = operate(finalAnswer[0],finalAnswer[2],finalAnswer[1]);
     console.log("Intermediate answer: " + intermediateAnswer);
 
@@ -136,6 +143,8 @@ document.getElementById("equals").addEventListener("click", function() {
   displayValue = finalAnswer;
 
 });
+
+// Function to update the screen and the variable every time a button is clicked
 
 function buttonClick(e) {
   if (e == 0 || e == 1 || e == 2 || 
@@ -160,7 +169,12 @@ function buttonClick(e) {
   } else if (e == "subtract") {
     screen.textContent += "−";
     displayValue += "−";
+  } else if (e == "decimal") {
+    screen.textContent += ".";
+    displayValue += ".";
   };
 };
+
+// Start the screen off with 0
 
 document.getElementById("screen").textContent = "0";
