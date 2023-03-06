@@ -122,16 +122,21 @@ document.getElementById("clear").addEventListener("click", function() {
 document.getElementById("equals").addEventListener("click", function() {
 
   console.log("displayValue " + displayValue);
-
-// Add decimal support
-
-// Function to work out the answer once you press equals
    
   let finalAnswer = displayValue.split(/([+×÷−])/);
   console.log("Initial finalAnswer: " + finalAnswer);
 
+  // If multiple decimal places in each number, return an error
+
+  if ((finalAnswer.slice(0,1).toString().match(/\./g) || []).length > 1 
+      || (finalAnswer.slice(2,3).toString().match(/\./g) || []).length > 1 
+      || (finalAnswer.slice(4,5).toString().match(/\./g) || []).length > 1 
+      || (finalAnswer.slice(6,7).toString().match(/\./g) || []).length > 1) {
+    return screen.textContent = "Error";
+  };
+
   while (finalAnswer.length > 1) {
-// Do a check here so that each element has no more than one decimal point
+
     let intermediateAnswer = operate(finalAnswer[0],finalAnswer[2],finalAnswer[1]);
     console.log("Intermediate answer: " + intermediateAnswer);
 
