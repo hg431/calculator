@@ -16,3 +16,4 @@ This is the calculator app built as part of The Odin Project.
 - Fixing floating point number precision issues (try 1.52-2.1)
 - Backspace button to undo if you click the wrong number
 - Responsive design
+- Animated button press
